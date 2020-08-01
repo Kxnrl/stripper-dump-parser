@@ -234,7 +234,7 @@ namespace stripper_dump_parser
         {
             var text = "\"Console_T\"" + Environment.NewLine + "{" + Environment.NewLine;
 
-            transTxt.ForEach(line =>
+            transTxt.Distinct().ToList().ForEach(line =>
             {
                 text += Environment.NewLine;
                 text += "    " + "\"" + line + "\"" + Environment.NewLine;
